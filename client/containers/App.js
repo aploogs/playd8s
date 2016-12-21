@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { logout } from '../actions/auth';
 import Flash from '../components/Flash';
+import $ from 'jquery';
+import Dashboard from '../components/Dashboard.js';
+import Register from '../components/Register.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,9 +14,10 @@ class App extends React.Component {
     this.logout = this.logout.bind(this);
   }
 
+
   componentDidMount() {
-    $('.button-collapse').sideNav();
-  }
+    window.jQuery('.button-collapse').sideNav();
+    }
 
   logout(e) {
     e.preventDefault();
@@ -26,9 +30,9 @@ class App extends React.Component {
         return (
           <div>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            <li><Link to="/history">History</Link></li>
+            <li><Link to="/friends">Friends</Link></li>
+            <li><Link to="/games">Games</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
             <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
           </div>
         )
@@ -43,9 +47,8 @@ class App extends React.Component {
       default:
         return (
           <div>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/signup">Signup</Link></li>
-            <li><Link to="/signin">Sign In</Link></li>
+            <li><Link to="/register">Register</Link></li>
+            <li><Link to="/login">Log In</Link></li>
           </div>
         )
     }
@@ -54,18 +57,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <nav className="purple">
+        <nav className="light-blue">
           <div className="nav-wrapper">
-            <Link to="/" className="brand-logo">My Logo</Link>
+            <Link to="/" className="brand-logo">Logo</Link>
             <a href="#" data-activates="mobile" className="button-collapse">
-              <i className="fa fa-bars"></i>
+              <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">
               {this.navs()}
             </ul>
             <ul className="side-nav" id="mobile">
               {this.navs()}
-            </ul>  
+            </ul>
           </div>
         </nav>
         <Flash />
@@ -80,4 +83,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(App);
-

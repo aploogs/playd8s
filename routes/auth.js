@@ -12,11 +12,12 @@ const isAuthenticated = (req, res, next) => {
     return res.json({ })
 }
 
-router.post('/signup', (req, res) => {
+router.post('/register', (req, res) => {
   User.register(new User({username: req.body.email}), req.body.password, (err, user) => {
     if (err)
       return res.status(500).json(err);
- 
+    user.firstname = req.body.firstname;
+    user.lastname = req.body.lastname;
     user.save( (err, user) => {
       if (err)
         return res.status(500).json(err);
@@ -27,7 +28,7 @@ router.post('/signup', (req, res) => {
   });
 });
 
-router.post('/signin', (req, res) => {
+router.post('/login', (req, res) => {
   User.findOne({ username: req.body.email}, (err, user) => {
     user.authenticate(req.body.password, (err, user, passwordErr) => {
       if (err)
@@ -36,6 +37,7 @@ router.post('/signin', (req, res) => {
         return res.status(500).json({ message: passwordErr.message })
 
       req.logIn(user, (err) => {
+
         return res.json(user);
       })
     });

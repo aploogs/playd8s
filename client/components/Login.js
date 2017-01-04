@@ -36,17 +36,20 @@ class LogIn extends React.Component {
 
   render() {
     return (
-      <div className="row">
+      <div id="index-banner" className="row center">
         <div className="col m4 offset-m4">
-          <div className="center">
+          <div className="container">
             <h3>Log In</h3>
               <form onSubmit={this.handleSubmit}>
                 <input type="email" required={true} ref="email" placeholder="email" />
                 <input type="password" required={true} ref="password" placeholder="password" />
-                <button className="btn">Log In</button>
+                <button className="btn red darken-1">Log In</button>
               </form>
           </div>
+
         </div>
+
+
       </div>
     )
   }

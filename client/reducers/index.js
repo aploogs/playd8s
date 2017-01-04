@@ -3,10 +3,11 @@ import { routerReducer } from 'react-router-redux';
 import user from './user';
 import flash from './flash';
 
-const rootReducer = combineReducers({
+const rootReducer = combineReducers({ 
     routing: routerReducer,
     user,
     flash
 });
 
 export default rootReducer;
+

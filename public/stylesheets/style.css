@@ -10,3 +10,83 @@
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
+.register-background {
+  background-color:#DFE2DB;
+  background: url(../images/register_img.png) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.login-background {
+  background-color: #FDF3E7;
+  background: url(../images/signin_img.png) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-background {
+  background-color: #FDF3E7;
+  background: url(../images/home_img.png) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* unused dashboard background styles
+
+.dashboard-background {
+  background-color: #000000;
+  background: url(../images/background_img01.png) no-repeat center center fixed;
+  background-position: center;
+  background-size: cover;
+}
+*/
+
+/* Dashboard Image / Avatar styles page */
+
+.image {
+   position: relative;
+   max-width: auto;
+}
+
+.hero-text {
+   position: absolute;
+   top: 40px;
+   right: 0;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.50);
+   color: #000000;
+   display: inline;
+   padding: .75rem;
+}
+
+
+/* No match page  */
+
+.no-match {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+
+/* home page */
+
+.image {
+   position: relative;
+   max-width: auto;
+}
+
+.home-text {
+   position: absolute;
+   top: 100px;
+   right: 0;
+   width: 100%;
+   color: #000000;
+   display: inline;
+   padding: .75rem;
+}

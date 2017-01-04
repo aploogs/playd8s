@@ -10,7 +10,7 @@ class Friends extends React.Component {
   constructor(props) {
     super(props);
     this.getFriends = this.getFriends.bind(this);
-    this.state = { friends: [] }
+    this.state = { friends: [] } 
   }
 
 getFriends(e) {
@@ -26,7 +26,7 @@ getFriends(e) {
 		});
 }
 	render() {
-
+		
 		return(
 			<div>
 				<div className="row">
@@ -46,3 +46,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Friends);
+

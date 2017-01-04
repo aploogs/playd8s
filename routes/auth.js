@@ -37,7 +37,7 @@ router.post('/login', (req, res) => {
         return res.status(500).json({ message: passwordErr.message })
 
       req.logIn(user, (err) => {
-
+        
         return res.json(user);
       })
     });

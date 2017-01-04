@@ -45,7 +45,7 @@ class Register extends React.Component {
                 <input type="text" placeholder="Last Name" ref="lastname" required={true} />
                 <input type="email" placeholder="email" ref="email" required={true} />
                 <input type="password" placeholder="password" ref="password" required={true} />
-                <button className="btn">Register</button>
+                <button className="btn red darken-1">Register</button>
               </form>
             </div>
         </div>

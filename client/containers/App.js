@@ -6,6 +6,7 @@ import Flash from '../components/Flash';
 import $ from 'jquery';
 import Dashboard from '../components/Dashboard.js';
 import Register from '../components/Register.js';
+import Home from '../components/Home.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,6 @@ class App extends React.Component {
     this.navs = this.navs.bind(this);
     this.logout = this.logout.bind(this);
   }
-
 
   componentDidMount() {
     window.jQuery('.button-collapse').sideNav();
@@ -55,11 +55,20 @@ class App extends React.Component {
   }
 
   render() {
+    let contentToRender
+
+    if (this.props.location.pathname === '/') {
+      contentToRender = <Home />
+    } else {
+      contentToRender = this.props.children
+    }
+
+
     return (
       <div>
-        <nav className="light-blue">
+        <nav className="red darken-1 nav">
           <div className="nav-wrapper">
-            <Link to="/" className="brand-logo">Logo</Link>
+            <Link to="/" className="brand-logo"><img className="responsive-img" id="logo" src="/images/PLAYD8S_logo.png"/></Link>
             <a href="#" data-activates="mobile" className="button-collapse">
               <i className="material-icons">menu</i>
             </a>
@@ -71,9 +80,15 @@ class App extends React.Component {
             </ul>
           </div>
         </nav>
+
         <Flash />
-        { this.props.children }
+
+       {contentToRender}
+
       </div>
+
+
+
     )
   }
 }

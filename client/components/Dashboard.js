@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import App from '.././containers/App'
+import { SocialIcon } from 'react-social-icons';
 
 
 const Dashboard = ({ user }) => {
-console.log(user);
   let styles = {
     title: {fontWeight: '300', color: 'white'}
-  }
+  } 
 
   return(
     <div>
@@ -192,15 +192,13 @@ console.log(user);
           <div className="row">
             <div className="col l6 s12">
               <h4 className="brand-logo"><img className="responsive-img" id="logo" src="/images/PLAYD8S_logo.png"/></h4>
-              <p className="grey-text text-lighten-4">Don't forget to conect with us online.</p>
+              <p className="grey-text text-lighten-4">Don't forget to conect with us online</p>
             </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Socials</h5>
-              <ul>
-                <li><a className="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-                <li><a className="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
-                <li><a className="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
-              </ul>
+            <div className="socialIcons" className="col l4 offset-l2 s12">
+              <h5 className="white-text">Share</h5>
+                <SocialIcon url="https://www.facebook.com/" />
+                <SocialIcon url="https://twitter.com/" />
+                <SocialIcon url="https://www.instagram.com/?hl=en" color="#fb3958" />
             </div>
           </div>
         </div>

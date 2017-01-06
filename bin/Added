@@ -1,0 +1,5 @@
+Installed dotenv, request, unirest and steam-api in package.json
+I forgot to export the routes/steam page module
+I didn't set the routes for app.use('/steam, steam') in the backend. We have to set that up since we are hitting the backend and getting the api data from there. 
+To differrentiate between which is bacnend and frontend, if something console.logs in the terminal, then that is something belonging to backend. 
+Don't forget to: require('dotenv').config(); in the backend app.js file 

@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,6 +12,7 @@ mongoose.connect( 'mongodb://localhost/react-redux-playD8s' );
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
+var steam = require('./routes/steam');
 
 var app = express();
 
@@ -43,6 +45,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Credentials: true");
+  res.header("Access-Control-Allow-Methods: GET,POST, PUT, DELETE, PATCH, OPTIONS");
+  next();
+});
+
 var User = require('./models/user');
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -51,6 +61,7 @@ passport.deserializeUser(User.deserializeUser());
 //PUT API ROUTES HERE vvv
 //
 app.use('/api/auth', auth);
+app.use('/api/steam', steam);
 //
 //PUT API ROUTES HERE ^^^^
 

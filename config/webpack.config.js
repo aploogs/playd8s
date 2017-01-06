@@ -7,6 +7,10 @@ var config = {
   entry: [
     path.join(__dirname, '../client/index.js')
   ],
+  devServer: {
+    contentBase: './docs',
+    inline: true
+  },
   output: {
     path: __dirname + '/build/',
     filename: 'bundle.js',

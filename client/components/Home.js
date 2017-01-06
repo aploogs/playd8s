@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { SocialIcon } from 'react-social-icons';
+
 
 export default function Home (props) {
   return (
@@ -35,13 +37,11 @@ export default function Home (props) {
                <h4 className="brand-logo"><img className="responsive-img" id="logo" src="/images/PLAYD8S_logo.png"/></h4>
                <p className="grey-text text-lighten-4">Don't forget to conect with us online.</p>
              </div>
-             <div className="col l4 offset-l2 s12">
-               <h5 className="white-text">Socials</h5>
-               <ul>
-                 <li><a className="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-                 <li><a className="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
-                 <li><a className="grey-text text-lighten-3" href="https://www.instagram.com/?hl=en">Instagram</a></li>
-               </ul>
+             <div className="socialIcons" className="col l4 offset-l2 s12">
+               <h5 className="white-text">Share</h5>
+                  <SocialIcon url="https://www.facebook.com/" />
+                  <SocialIcon url="https://twitter.com/" />
+                  <SocialIcon url="https://www.instagram.com/?hl=en" color="#fb3958" />
              </div>
            </div>
          </div>

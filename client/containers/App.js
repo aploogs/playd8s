@@ -29,7 +29,6 @@ class App extends React.Component {
       case 'user':
         return (
           <div>
-            <li><Link to="/">Home</Link></li>
             <li><Link to="/friends">Friends</Link></li>
             <li><Link to="/games">Games</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>

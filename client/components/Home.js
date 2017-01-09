@@ -22,8 +22,8 @@ export default function Home (props) {
                     <Link className="btn red darken-1" to="/login">Log In</Link>
                     <br></br>
                     <br></br>
-                  <h5 className="header col s12 light white-text">By connecting with your Steam account PLAYD8s finds you
-                  <br></br>friends to play with based on games that you play!</h5>
+                  <h5 className="header col s12 light white-text">By connecting with the Internet Games Database (IGDB), PLAYD8s brings
+                  <br></br>you friends to play with, games to play & trending game news daily!</h5>
                 </div>
           </div>
       </div>

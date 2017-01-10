@@ -24,7 +24,7 @@ export default (
   <Route>
     <Route path="/" component={App}>
       <Route path="register" component={Register} />
-      <Route path="login" component={LogIn} />
+      {/* <Route path="login" component={LogIn} /> */}
       <Route component={AuthenticatedRoutes}>
         <Route path="dashboard" component={Dashboard} />
         <Route path="games" component={Game} />

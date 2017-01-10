@@ -6,7 +6,7 @@ import Admin from './components/Admin';
 import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import Dashboard from './components/Dashboard';
 import Register from './components/Register';
-import LogIn from './components/LogIn';
+//import LogIn from './components/LogIn';
 import Game from './components/Game';
 import Friends from './components/Friends';
 import NoMatch from './components/NoMatch';
@@ -38,4 +38,3 @@ export default (
     </Route>
   </Route>
 )
-

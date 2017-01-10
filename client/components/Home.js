@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { SocialIcon } from 'react-social-icons';
+import homeLogo from '../images/PLAYD8S_logo_home.png';
+import homeImg from '../images/home_img.png';
 
 
 export default function Home (props) {
@@ -9,10 +11,10 @@ export default function Home (props) {
 
 
       <div className="image">
-        <img src="/images/home_img.png" alt="hero_img" />
+        <img src={homeImg} alt="hero_img" />
           <div className="home-text">
             <div className="row center">
-              <img src="/images/PlayD8s_logo_home.png" alt="PlayD8s logo" />
+              <img src={homeLogo} alt="PlayD8s logo" />
             </div>
               <h4 className="header center-align white-text">See what friends you've made.
                 <br></br>Stay and make new ones.

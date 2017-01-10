@@ -30,7 +30,14 @@ var config = {
         loader: 'babel',
         exclude: /node_modules/
       },
-      { test: /\.less$/, loader: "style!css!less" }
+      { test: /\.less$/, loader: "style!css!less" },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 25000
+        }
+      },
     ]
   },
   resolve: {

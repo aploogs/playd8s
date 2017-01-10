@@ -6,7 +6,7 @@ import Admin from './components/Admin';
 import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import Dashboard from './components/Dashboard';
 import Register from './components/Register';
-import LogIn from './components/LogIn';
+import Login from './components/Login';
 import Game from './components/Game';
 import Friends from './components/Friends';
 import NoMatch from './components/NoMatch';
@@ -24,7 +24,7 @@ export default (
   <Route>
     <Route path="/" component={App}>
       <Route path="register" component={Register} />
-      <Route path="login" component={LogIn} />
+      <Route path="login" component={Login} />
       <Route component={AuthenticatedRoutes}>
         <Route path="dashboard" component={Dashboard} />
         <Route path="games" component={Game} />

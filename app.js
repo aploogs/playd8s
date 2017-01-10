@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-mongoose.connect( 'mongodb://localhost/react-redux-playD8s' );
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/react-redux-playD8s';
+mongoose.connect(mongoUri)
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');

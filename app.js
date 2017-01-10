@@ -9,8 +9,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/react-redux-playD8s';
-mongoose.connect(mongoUri)
-
+mongoose.connect(mongoUri);
+//ascasc
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
 var steam = require('./routes/steam');

@@ -57,4 +57,4 @@ const LogIn = () => (
   <div>Login</div>
 )
 
-export default connect()(LogIn);
+export default LogIn;

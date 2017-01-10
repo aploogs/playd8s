@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { refreshLogin } from '../actions/auth';
-import $ from 'jquery';
+// import { connect } from 'react-redux';
+// import { refreshLogin } from '../actions/auth';
+// import $ from 'jquery';
 
 // class LogIn extends React.Component {
 //   constructor(props) {
